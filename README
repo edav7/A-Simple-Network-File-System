@@ -5,9 +5,9 @@ Nick
 • 
 
 Eddie Avendaño
-• 
-• 
-•
+• Created stat
+• Debugged/tested server & client
+• Reserved study room for team meetings
 
 Marco Rodriguez
 • Worked on Shell.cpp and Shell.h
@@ -24,10 +24,98 @@ Explanation:
 
 
 //// Test cases ///////////////////////////////////////////
+All of these commands were done in this exact order
+
+
 Test case #1: mkdir abc
-Results: 
+Results:NFS> success
+
+Test case #2: create file1
+Results:NFS>success
+
+Test case #3: ls
+Results:NFS>abc file1
+
+Test case #4:append abc helloworld!
+Results:NFS>501 File is a directory
 
 
-Test case #2: 
+Test case #5:cd file1
+Results:NFS>500 File is not a directory
+
+
+Test case #6:cd abc
+Results:NFS>success
+
+Test case #7: ls
+Results:NFS>empty folder
+
+Test case #8: create file1 (now in directory abc)
+Results:NFS>success
+
+Test case #9:append file1 helloworld!
+Results:NFS>success
+
+Test case #10:cat file1
+Results:NFS>helloworld!
+
+
+Test case #11: state file1 
+Results:NFS>
+Inode block: 5
+Bytes in file: 11
+number of blocks:2
+first block: 7
+
+Test case #12 head file1 5
+Results:NFS>hello
+
+Test case #13 create file1
+Results:NFS>502 file exists
+
+Test case #14 mkdir dir2
+Results:NFS>success
+
+Test case 15: stat dir2
+Results:NFS>
+Directory name:     dir2/
+directory block:     6
+
+test case #14 home
+NFS>success
+
+test case #15: rmdir abc
+Results:NFS>507 Directory is not empty
+
+Test case #15 rm file1 
+Results:NFS>success
+
+test case #15 
+
+Test case #15 append file1 goodbye!
+Results:NFS>503  File does not exist
+
+Test case #16 create this_name_is_too_long_for_a_file
+Results:NFS>504 file name is too long
+
+
+Test case #17 (creating more then 10 files in a directory)
+Results:NFS>505 Disk is full
+
+Test case #17 (creating more then 10 files in a directory)
+Results:NFS>506 Directory is full
+
+Test case #17 appending 
+Results:NFS>508 Directory is full
+
+
+
+
+
+
+
+
+
+
 
 ...
